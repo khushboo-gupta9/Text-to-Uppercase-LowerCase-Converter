@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Navbar.css'; // CSS for Navbar
+import './Navbar.css'; // Updated CSS file
 
 export default function Navbar(props) {
   return (
@@ -9,9 +9,10 @@ export default function Navbar(props) {
         <a className="navbar-brand" href="/">{props.title}</a>
         <div className="navbar-links">
           <a className="nav-link" href="/">Home</a>
-          <a className="nav-link" href="/">About</a>
+          <a className="nav-link" href="/about">About</a>
+          <a className="nav-link" href="/">Home</a>
+          <a className="nav-link" href="/about">About</a>
         </div>
-       
         <form className="navbar-search">
           <input
             className="search-input"
@@ -30,5 +31,4 @@ export default function Navbar(props) {
 
 Navbar.propTypes = {
   title: PropTypes.string,
-  about: PropTypes.string,
 };
