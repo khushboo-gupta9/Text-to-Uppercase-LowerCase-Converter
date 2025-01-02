@@ -1,34 +1,51 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import './Navbar.css'; // Updated CSS file
+import './Navbar.css'; // Custom styles
+
 
 export default function Navbar(props) {
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
-        <a className="navbar-brand" href="/">{props.title}</a>
-        <div className="navbar-links">
-          <a className="nav-link" href="/">Home</a>
-          <a className="nav-link" href="/about">About</a>
-          <a className="nav-link" href="/">Home</a>
-          <a className="nav-link" href="/about">About</a>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container">
+        <a className="navbar-brand" href="/">
+          {props.title}
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav me-auto">
+            <li className="nav-item">
+              <a className="nav-link active" href="/">
+                Home
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/about">
+                About
+              </a>
+            </li>
+          </ul>
+          <form className="d-flex">
+            <input
+              className="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button className="btn btn-outline-light" type="submit">
+              Search
+            </button>
+          </form>
         </div>
-        <form className="navbar-search">
-          <input
-            className="search-input"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button className="btn search-btn" type="submit">
-            Search
-          </button>
-        </form>
       </div>
     </nav>
   );
 }
-
-Navbar.propTypes = {
-  title: PropTypes.string,
-};

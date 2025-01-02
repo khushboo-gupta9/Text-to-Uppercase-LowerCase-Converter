@@ -1,91 +1,43 @@
-/* Navbar.css */
-.navbar {
-  background-color: #1a1a2e;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-family: 'Arial', sans-serif;
-}
-
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
-}
-
 .navbar-brand {
-  font-size: 1.5rem;
   font-weight: bold;
-  color: #fff;
-  text-decoration: none;
-  margin-right: 20px;
-  transition: color 0.3s ease;
+  font-size: 1.5rem;
+  color: #ffffff !important; /* Override Bootstrap color */
+  transition: color 0.3s ease-in-out;
 }
 
 .navbar-brand:hover {
-  color: #e94560;
-}
-
-.navbar-links {
-  display: flex;
-  gap: 15px;
+  color: #e94560 !important; /* Highlight color */
 }
 
 .nav-link {
-  color: #ddd;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+  color: #ffffff !important;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
 }
 
 .nav-link:hover {
-  color: #e94560;
+  color: #e94560 !important; /* Highlight color */
 }
 
-.navbar-search {
-  display: flex;
-  gap: 10px;
-}
-
-.search-input {
-  padding: 8px 12px;
-  border: 1px solid #ddd;
+.form-control {
   border-radius: 20px;
-  outline: none;
-  transition: all 0.3s ease;
+  font-size: 1rem;
 }
 
-.search-input:focus {
-  border-color: #e94560;
+.form-control:focus {
   box-shadow: 0 0 5px rgba(233, 69, 96, 0.5);
+  border-color: #e94560;
 }
 
-.search-btn {
-  background-color: #e94560;
-  color: #fff;
-  border: none;
-  padding: 8px 15px;
+.btn-outline-light {
   border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  padding: 8px 16px;
 }
 
-.search-btn:hover {
-  background-color: #ff5c7a;
+.btn-outline-light:hover {
+  background-color: #e94560;
+  border-color: #e94560;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .navbar-links {
-    display: none;
-  }
 
-  .navbar-search {
-    flex-grow: 1;
-    justify-content: flex-end;
-  }
-}
