@@ -59,4 +59,12 @@ textarea.form-control:focus {
 .mt-4 p {
   color: #555; /* Subtle text color */
 }
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
 

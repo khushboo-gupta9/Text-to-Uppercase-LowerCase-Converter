@@ -35,6 +35,9 @@ export default function TextForm(props) {
             <button className="btn btn-secondary" onClick={handleLoClick}>
               Convert to Lowercase
             </button>
+            <button className="btn btn-danger" onClick={() => setText('')}>
+             Clear Text
+           </button>
           </div>
         </div>
       </div>
